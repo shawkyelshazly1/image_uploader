@@ -19,7 +19,7 @@ export default function Uploader() {
 
 	//upload imag request
 	const uploadImage = async (imageString) => {
-		let reg = /\bdata:image\/\w+;base64,\b/;
+		let reg = /data:image\/\w+;base64,/;
 		let formData = new FormData();
 		formData.append("image", imageString.replace(reg, ""));
 
